@@ -25,7 +25,7 @@ body {
 }
 
 .homeBg {
-  background: url("media files/bg11.JPG");
+  background: url("media files/bg11.jpg");
   background-size: cover;
   object-fit: cover;
   background-position: center;

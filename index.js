@@ -23,6 +23,39 @@ document.getElementById("form").addEventListener("submit", function (event) {
 
 // ---------------- Contact Form Script End -------------------//
 
+// ----------------- Calculator Script Start -----------------------//
+
+// Run only when modal is opened
+document
+  .getElementById("staticBackdrop2")
+  .addEventListener("shown.bs.modal", () => {
+    display = document.getElementById("display");
+    display.value = "";
+  });
+
+// Calculator Functions
+function press(char) {
+  display.value += char;
+}
+
+function clearDisplay() {
+  display.value = "";
+}
+
+function backspace() {
+  display.value = display.value.slice(0, -1);
+}
+
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
+  }
+}
+
+// ---------------- Calculator Script End -------------------//
+
 // ---------------- Notepad Script Start -------------------//
 
 function saveFile() {

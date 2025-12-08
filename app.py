@@ -79,7 +79,7 @@ def generate():
 
     try:
         response = gemini_model.generate_content(
-            f"Create a clear, step-by-step recipe using: {query}.\n"
+            f"Create a clear, step-by-step Filipino food recipe using: {query}.\n"
             "Include: title, ingredients with quantities and price per ingredients, instructions,  , "
             "estimated time, servings (numbered), total price per batch, and calorie counter."
         )

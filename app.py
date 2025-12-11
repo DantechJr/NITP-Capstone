@@ -50,23 +50,6 @@ def pick_model():
 
 gemini_model = pick_model()
 
-# Routes
-# @app.route("/")
-# def index():
-#     return render_template("../templates/index.html")
-
-# @app.route("/home")
-# def index():
-#     return render_template("../templates/home.html")
-
-# @app.route("/about")
-# def about():
-#     return render_template("../templates/about.html")
-
-# @app.route("/contact")
-# def contact():
-#     return render_template("../templates/contact.html")
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -83,14 +66,6 @@ def about():
 def contact():
     return render_template("contact.html")
 
-if __name__ == "__main__":
-    app.run(debug=True)
-
-# Serve root-level CSS because contact.html references href="style.css"
-# @app.route("/style.css")
-# def style_root():
-#     return send_from_directory(app.static_folder, "../static/style.css")
-
 # Generate recipe (ingredient or dish name only)
 @app.route("/generate", methods=["POST"])
 def generate():
@@ -104,7 +79,7 @@ def generate():
         response = gemini_model.generate_content(
             f"Create a clear, step-by-step Filipino food recipe using: {query}.\n"
             "Include: title, ingredients with quantities and price per ingredients, instructions,  , "
-            "estimated time, servings (numbered), total price per batch, and calorie counter."
+            "estimated time, servings (numbered), total price per batch, and calorie counter. don't add disclaimer in the end."
         )
 
         recipe = getattr(response, "text", None)

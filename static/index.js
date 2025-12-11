@@ -13,25 +13,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const outputArea = document.getElementById("FormControlTextarea1");
 
   // Generate Recipe
-  generateBtn.addEventListener("click", async () => {
-    const query = inputBox.value.trim();
-    if (!query) {
-      outputArea.value = "⚠️ Please type an ingredient or dish first!";
-      return;
-    }
+ generateBtn.addEventListener("click", async () => {
+      const query = inputBox.value.trim();
+      if (!query) {
+        outputArea.value = "⚠️ Please type an ingredient or dish first!";
+        return;
+      }
 
-    try {
-      const response = await fetch("/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query }),
-      });
-      const data = await response.json();
-      outputArea.value = data.result;
-    } catch (error) {
-      outputArea.value = "❌ Error generating recipe. Please try again.";
-    }
-  });
+      try {
+        const response = await fetch("/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query }),
+        });
+        const data = await response.json();
+        outputArea.value = data.result;
+      } catch (error) {
+        outputArea.value = "❌ Error generating recipe. Please try again.";
+      }
+    });
+
+    // Trigger on Enter key
+    inputBox.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();   // stop page refresh
+        generateBtn.click();      // reuse the button logic
+      }
+    });
+
 
   // Week Plan (ingredient-based)
   weekPlanBtn.addEventListener("click", async () => {

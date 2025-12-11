@@ -22,9 +22,9 @@
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid mx-3">
-          <a class="navbar-brand" href="../templates/index.html">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
             <img
-              src="../static/media files/logo.png"
+              src="{{ url_for('static', filename='media files/logo.png') }}"
               alt="Logo"
               class="navbar-logo"
             />
@@ -46,7 +46,7 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="../templates/home.html"
+                  href="{{ url_for('home') }}"
                   >Home</a
                 >
               </li>
@@ -54,7 +54,7 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="../templates/about.html"
+                  href="{{ url_for('about') }}"
                   >About</a
                 >
               </li>
@@ -62,7 +62,7 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="../templates/contact.html"
+                  href="{{ url_for('contact') }}"
                   >Contact</a
                 >
               </li>

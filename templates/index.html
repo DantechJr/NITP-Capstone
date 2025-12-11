@@ -22,9 +22,9 @@
   >
     <div class="landingLogo p-5 text-center rounded-3">
       <div class="container-fluid mx-3">
-        <a class="navbar-brand" href="../templates/index.html">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
           <img
-            src="../static/media files/logo.png"
+            src="{{ url_for('static', filename='media files/logo.png') }}"
             alt="Logo"
             width="70%"
             height="70%"
@@ -35,7 +35,10 @@
           Healthy options in just one click!
         </p>
         <div class="d-inline-flex gap-2 mb-5">
-          <a href="../templates/home.html" class="btn btn-outline-success"
+          <a
+            href="href"
+            ="{{ url_for('home') }}"
+            class="btn btn-outline-success"
             >Generate Now</a
           >
         </div>

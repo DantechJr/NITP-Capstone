@@ -1,11 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   box-sizing: border-box;
-=======
-  box-sizing: 0;
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
 }
 
 html,
@@ -21,11 +17,7 @@ body {
 }
 
 .landingBg {
-<<<<<<< HEAD
-  background: url("media files/bg.jpg");
-=======
-  background: url("/static/media_files/bg.jpg");
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
+  background: url("/static/media files/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,11 +25,7 @@ body {
 }
 
 .homeBg {
-<<<<<<< HEAD
-  background: url("media files/homeBg.jpg");
-=======
-  background: url("/static/media_files/bg10.jpg");
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
+  background: url("/static/media files/homeBg.jpg");
   background-size: cover;
   object-fit: cover;
   background-position: center;
@@ -45,11 +33,7 @@ body {
 }
 
 .contactBg {
-<<<<<<< HEAD
-  background: url("media files/bg7.jpg");
-=======
-  background: url("/static/media_files/bg7.jpg");
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
+  background: url("/static/media files/bg7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -108,48 +92,33 @@ main {
   align-items: center;
 }
 
-<<<<<<< HEAD
 h2 {
   margin-bottom: 10px;
 }
 
-=======
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
 .notepadBtn {
   position: fixed;
   bottom: 60px;
   left: 20px;
-<<<<<<< HEAD
   z-index: 1500;
-=======
-  z-index: 1500; /* Above everything but below modal backdrop */
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
   padding: 10px 18px;
   border-radius: 8px;
   background: #f8f9fa;
   border: 1px solid #ccc;
 }
 
-<<<<<<< HEAD
 /* ------------------------ Calculator CSS Start ----------------------- */
-=======
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
 .calculatorBtn {
   position: fixed;
   bottom: 110px;
   left: 20px;
-<<<<<<< HEAD
   z-index: 1500;
-=======
-  z-index: 1500; /* Above everything but below modal backdrop */
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
   padding: 10px 18px;
   border-radius: 8px;
   background: #f8f9fa;
   border: 1px solid #ccc;
 }
 
-<<<<<<< HEAD
 .calcBody {
   font-family: Arial, sans-serif;
   display: flex;
@@ -207,8 +176,6 @@ h2 {
 
 /* ------------------- Calculator CSS End ----------------- */
 
-=======
->>>>>>> 8e36e8dcf1ab53444d2833dec5705f76060ff0b7
 .bordered-box {
   width: 100%;
   padding: 10px;
